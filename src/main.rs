@@ -15,5 +15,5 @@ fn python() -> String {
             .into();
         app.call0(py)
     });
-    return from_python.unwrap().to_string();
+    from_python.unwrap().to_string()
 }
