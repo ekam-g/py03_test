@@ -11,7 +11,8 @@ fn python() -> String {
     let from_python = Python::with_gil(|py| -> PyResult<Py<PyAny>> {
         let app: Py<PyAny> = PyModule::from_code(py, py_app, "", "")
             .unwrap()
-            .getattr("test").unwrap()
+            .getattr("test")
+            .unwrap()
             .into();
         app.call0(py)
     });
