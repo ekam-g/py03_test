@@ -1,9 +1,7 @@
 use pyo3::prelude::*;
 
 fn main() {
-    for _ in 0..200 {
-        println!("python says: {}", python());
-    }
+    println!("python says: {}", python());
 }
 
 fn python() -> String {
